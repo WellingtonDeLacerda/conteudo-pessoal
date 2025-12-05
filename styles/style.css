@@ -1,0 +1,208 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* CORES */
+    --cor1:#55ffff ;
+    --cor2:#041b32 ;
+    --cor3:#902bff ;
+    --cor4:#6a78ff ;
+    --cor5:#ff4a2b ;
+    --cor6:#511407 ;
+    
+    --branco:#fff;
+    
+    /* transparente */
+    --cor7:#ffffeac4 ;
+    
+    /* FONTE */
+    --fonte-bold:normal 700 clamp(2rem,5vw,3rem) Arial, Sans-serif ;
+    --fonte-regular:normal 400 clamp(1rem,3vw,1.5rem) Arial, Sans-serif ;
+    
+}
+h1,h2 {
+    font: var(--fonte-bold);
+}
+button,a {
+    font: var(--fonte-regular);
+}
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--branco) url("../images/fundo.jpg") no-repeat right center;
+    background-size: cover;
+}
+header {
+    display: flex;
+    background-image:linear-gradient(to top,var(--cor6),var(--cor2));
+    color: var(--cor2);
+    padding: .5rem;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 6px #00000035;
+    position: sticky;
+    top: 0;
+}
+header .btn {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+header i {
+    color: white;
+    font-size: 1.6rem;
+}
+header .btn button{
+    color: var(--branco);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    background: var(--cor5);
+    border-radius: .6rem;
+    box-shadow: 0px 0px 5px #00000035;
+    border: 2px solid var(--cor6);
+}
+header button:hover {
+    background: transparent;
+    border-color: var(--cor5);
+}
+header .img {
+    width: 40px;
+    height: 40px;
+}
+header img {
+    width: 100%;
+}
+main {
+    display: grid;
+    grid-template-columns:20px 1fr 20px ;
+}
+section.content {
+    display: block;
+}
+section.content, section.images {
+    grid-area: 1 / 1 / -1 / -1;
+    background: var(--branco);
+    padding: 2rem;
+    overflow: hidden;
+    transition: .5s;
+}
+.content h1{
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem,5vw,2rem);
+    color: var(--cor2);
+}
+.content h2 {
+    text-transform: uppercase;
+    color: var(--cor5);
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 0px black;
+}
+.content img {
+    width: 18rem;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    outline: 5px solid var(--cor3);
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.content img:hover {
+    outline-color: var(--cor5);
+}
+.content p {
+    color: var(--cor2);
+    line-height: 25px;
+    text-align: justify;
+}
+.info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.info .active {
+    position: absolute;
+    top: -3rem;
+    background: var(--cor4);
+    color: var(--cor1);
+    font: var(--fonte-regular);
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}
+.info .botoes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+}
+.info button {
+    background: var(--cor3);
+    color: var(--branco);
+    border: none;
+    padding: clamp(.5rem,2vw,1rem);
+    border-radius: .5rem;
+    border: 2px solid var(--branco);
+    width: clamp(4rem,10vw,8rem);
+    font-weight: bolder;
+}
+.info button:hover {
+    background: transparent;
+    color: var(--cor5);
+    border: 2px solid var(--cor3);
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap:1rem;
+}
+nav a {
+    display: block;
+    color: var(--cor5);
+    font-size: 2rem;
+}
+nav a:hover {
+    color: var(--cor4);
+}
+section.fotos {
+    display: none;
+    background: var(--cor2);
+    margin-top: -1rem;
+    flex-flow: row wrap;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    gap:1rem;    
+}
+section.fotos img {
+    width: 20rem;
+    height: 25rem;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px #00000068;
+    border: 2px solid var(--cor4);
+}
+@media screen and (min-width:48rem){
+    main {
+        grid-template-columns: 1fr 44rem 2fr 1fr;
+        margin-top: 1rem;
+    }
+    section.content, section.images {
+        grid-area: 1 / 2 / -1 / 3;
+        
+        border-radius: .7rem;
+        padding: 3rem;
+        box-shadow: 0px 0px 7px #00000039;
+    }
+}
