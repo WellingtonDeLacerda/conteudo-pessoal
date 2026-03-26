@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+:root {
+    /* CORES */
+    --cor1: #ffffff;
+    --cor2: #e2e2e2;
+    --cor3: #158cff;
+    --cor4: #182692;
+    --cor5: #1d223a;
+    
+    /* FONTES */
+    --ff1: 'google sans', Arial, Sans-serif;
+    --ff2: 'oswald', Arial, Sans-serif;
+    --normal:500;
+    --semibold:600;
+    --bold:700;
+}

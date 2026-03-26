@@ -1,0 +1,22 @@
+[
+  {
+    "status" : "feliz",
+    "id": 0,
+    "txt": "Hoje o dia amanheceu com uma energia diferente. Há uma leveza no peito que faz tudo parecer mais vibrante e colorido. É aquele tipo de contentamento que não precisa de grandes motivos; apenas a satisfação de estar presente, de colher pequenas vitórias e de sentir que, por agora, tudo está exatamente onde deveria estar."
+  },
+  {
+    "status" : "triste",
+    "id": 1,
+    "txt": "Às vezes, o silêncio pesa um pouco mais e as cores parecem perder o brilho. É um momento de recolhimento, onde a mente busca entender o que dói e o coração pede uma pausa. Não há problema em não estar bem o tempo todo; acolher a própria tristeza é, muitas vezes, o primeiro passo para encontrar a cura e o recomeço."
+  },
+  {
+    "status" : "tedio",
+    "id": 2,
+    "txt": "O tempo parece ter estagnado e cada segundo no relógio soa mais arrastado que o anterior. Não há novidade, não há pressa e, honestamente, não há muito interesse no que está acontecendo ao redor. É aquele estado de neutralidade absoluta, onde a mente flutua em um vazio de estímulos, esperando por algo que realmente valha o esforço de reagir."
+  },
+  {
+    "status" : "chateado",
+    "id": 3,
+    "txt": "É difícil esconder o desapontamento quando as coisas não saem como o esperado ou quando a atitude alheia simplesmente não convence. O desânimo se mistura com uma pitada de irritação, criando aquele clima de 'sério mesmo?'. É um cansaço emocional que não pede descanso, mas sim um pouco mais de consideração e bom senso."
+  }
+]

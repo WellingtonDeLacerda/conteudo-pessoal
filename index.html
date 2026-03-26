@@ -3,40 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/root.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/desktop.css" media="screen and (min-width:48rem)">
     <script src="https://kit.fontawesome.com/870d21c1e1.js" crossorigin="anonymous"></script>
     <title>Conteúdo pessoal</title>
 </head>
-<body onload="carregar()">
+<body>
    <header>
-      <div class="btn">
-         <button type="button" onclick="abrirHome()">Home</button>
-         <button type="button" onclick="abrirFotos()">Fotos</button>
-         <i class="fa-solid fa-moon" id="modo" onclick="tema()"></i>
+      <div class="box_btn">
+         <button type="button" class="but">Home</button>
+         <button type="button" class="but">Fotos</button>
+         <div id="box_tema">
+         <i class="fa-solid fa-sun" id="tema"></i>
+         </div>
       </div>
-      <div class="img">
-         <img src="images/icon.png" alt="icone do site">
+      <div class="image">
+         <img src="assets/images/icon.png" alt="icone do site">
       </div>
    </header>
    <main>
      <!-- Aqui fica o conteúdo -->
      <section class="content">
        <h1>Sejam todos bem vindos ao meu site! sou Wellington Lacerda</h1>
-       <h2>Sou um desenvolvedor Web</h2>
+       <span>Sou um desenvolvedor Web</span>
        <div class="info">
-          <img src="images/face-sad.jpg" alt="perfil do meu site" id="perfil">
-          <div class="botoes" id="botoes"> 
-          <div class="active" id="ativo">Escolha uma emoação para o meu perfil </div>
-          <!-- Aqui fica os perfis -->
-          </div>
+          <img src="assets/images/face-sad.jpg" alt="perfil do meu site" id="perfil">
+       </div>
+       <div class="radio_faces">
+           <input type="radio" name="face" id="bored" checked class="radio">
+           <input type="radio" name="face" id="chated" class="radio">
+           <input type="radio" name="face" id="sad" class="radio">
+           <input type="radio" name="face" id="happy" class="radio">
+
+        <label for="bored" class="opt">😑</label>
+        <label for="chated" class="opt">😒</label>
+        <label for="sad" class="opt">😢</label>
+        <label for="happy" class="opt">😊</label>
+       </div>
+       <div class="box_txt">
+           
        </div>
        <nav>
            <ul>
-               <li><a href="https://www.youtube.com/@wellington_Lacerda" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-               <li><a href="https://github.com/WellingtonDeLacerda" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-               <li><a href="https://www.instagram.com/wellington_lacerda.art?igsh=djd5aHYxaDNwbjRn" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-               <li><a href="https://www.facebook.com/share/16iW8cM14r/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+               <li><a href="https://www.youtube.com/@wellington_Lacerda" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></li>
+               <li><a href="https://github.com/WellingtonDeLacerda" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i></a></li>
+               <li><a href="https://www.instagram.com/wellington_lacerda.art?igsh=djd5aHYxaDNwbjRn" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram" ></i></a></li>
+               <li><a href="https://www.facebook.com/share/16iW8cM14r/" target="_blank" rel="nofollow"><i class="fa-brands fa-facebook"></i></a></li>
            </ul>
        </nav>
      </section>
@@ -45,6 +60,6 @@
          
      </section>
    </main>
-   <script src="script/script.js"></script>
+   <script src="assets/scripts/script.js"></script>
 </body>
 </html>
