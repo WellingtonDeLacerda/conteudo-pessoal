@@ -26,6 +26,7 @@ header {
     position: sticky;
     top: 0;
     transition: .5s;
+    z-index: 2;
 }
 .box_btn {
     display: flex;
@@ -37,8 +38,8 @@ header {
     background: var(--cor1);
     border-radius: .6rem;
     box-shadow: 0px 0px 5px #00000035;
-    font-weight: var(--semibold);
-    border: 2px solid var(--cor1);
+    font-weight: var(--bold);
+    border: 3px solid var(--cor1);
     transition: .5s ;
     color: var(--cor5);
 }
@@ -58,7 +59,7 @@ header {
     font-size: 1.5rem;
 }
 .image img {
-    width: 2.5rem;
+    width: clamp(2.5rem,5vw,3.5rem);
 }
 main {
     display: grid;
@@ -99,6 +100,7 @@ main {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1.5rem;
+    position: relative;
 }
 .info img {
     width: clamp(16rem,5vw,30rem);
@@ -107,6 +109,21 @@ main {
     outline: 5px solid var(--cor3);
     display: block;
     margin-bottom: 1rem;
+}
+.info::after {
+    content: '';
+    top: -5px;
+    position: absolute;
+    border-radius: 50%;
+    width: clamp(16rem,5vw,30rem);
+    height: clamp(16rem,5vw,30rem);
+    border-top:12px solid var(--cor1);
+    animation: spin 3s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 .content p {
     margin-bottom: 1.5rem;
@@ -151,6 +168,10 @@ nav a:hover {
     box-shadow: 0px 0px 7px #00000068;
     border: 2px solid var(--cor3);
 }
+.fotos img:hover {
+    border-color: var(--cor5);
+    transform: scale(1.05);
+}
 .radio_faces {
     display: flex;
     flex-flow: row wrap;
@@ -161,12 +182,29 @@ nav a:hover {
 .radio_faces input[type="radio"] {
     display: none;
 }
-.radio_faces .opt {
+.radio_faces label {
     font-size: 1.7rem;
     display: flex;
     padding: .5rem;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+}
+.radio_active {
+    border: 2px solid var(--cor5);
+    position: relative;
+}
+.radio_active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border-top: 3px solid var(--cor1);
+    animation: spin .5s linear;
+}
+.radio_disabled {
     border: 2px solid var(--cor3);
 }

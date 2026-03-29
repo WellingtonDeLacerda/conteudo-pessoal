@@ -1,6 +1,22 @@
+header {
+    padding: clamp(.5rem,5vw,1rem);
+}
 main {
     grid-template-columns: 1fr 44rem 2fr 1fr;
     margin-top: 1rem;
+}
+.but {
+    font-size: 1.5rem;
+}
+.image img {
+    width: clamp(3.4rem,5vw,3.8rem);
+}
+#box_tema {
+    width: clamp(2.7rem,5vw,3rem);
+    height: clamp(2.7rem,5vw,3rem);
+}
+#box_tema #tema {
+    font-size: 2rem;
 }
 .content {
     grid-area: 1 / 2 / -1 / 3;
