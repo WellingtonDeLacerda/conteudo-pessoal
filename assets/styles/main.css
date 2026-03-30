@@ -151,7 +151,6 @@ nav a:hover {
     cursor: pointer;
 }
 .fotos {
-    display: none;
     background: var(--cor2);
     width: 100%;
     min-height: 100vh;
@@ -207,4 +206,16 @@ nav a:hover {
 }
 .radio_disabled {
     border: 2px solid var(--cor3);
+}
+.content_active {
+    display: block;
+}
+.content_disabled {
+    display: none;
+}
+.fotos_active {
+    display: flex;
+}
+.fotos_disabled {
+    display: none;
 }
